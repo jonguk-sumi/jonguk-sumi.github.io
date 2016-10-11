@@ -251,6 +251,23 @@
 	</iframe>-->
 <div class="text-center">
 	<h3>찾아오시는 길</h3>
+	
+	<div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=fe6f726af1cea18c1957c9917c4ad59e"></script>
+	<script>
+ var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+ var options = { //지도를 생성할 때 필요한 기본 옵션
+ 	center: new daum.maps.LatLng(37.5129475, 126.9348479), //지도의 중심좌표.,,
+ 	level: 3 //지도의 레벨(확대, 축소 정도)
+ };
+ 
+ var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
+ </script>
+<!--
+ +	* Daum 지도 - 약도서비스
+ +	* 한 페이지 내에 약도를 2개 이상 넣을 경우에는
+ +	* 약도의 수 만큼 소스를 새로 생성, 삽입해야 합니다.
+ +
 	<!--
 	* Daum 지도 - 약도서비스
 	* 한 페이지 내에 약도를 2개 이상 넣을 경우에는
