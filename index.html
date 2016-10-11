@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
@@ -262,6 +262,19 @@
  };
  
  var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
+// 마커가 표시될 위치입니다 
+var markerPosition  = new daum.maps.LatLng(37.5129475, 126.9348479); 
+
+// 마커를 생성합니다
+var marker = new daum.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);		
+map.setDraggable(false);
+		
+		
  </script>
 <!--
  +	* Daum 지도 - 약도서비스
