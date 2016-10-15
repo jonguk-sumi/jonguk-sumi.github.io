@@ -83,7 +83,7 @@
   background-position: -44px 0; }
 
 .pswp__button--zoom {
-  display: none;
+  /*display: none;*/
   background-position: -88px 0; }
 
 .pswp--zoom-allowed .pswp__button--zoom {
