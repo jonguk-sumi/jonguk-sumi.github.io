@@ -73,8 +73,8 @@
 .pswp__button--share {
   background-position: -44px -44px; }
 
-.pswp__button--fs {
-  display: none; }
+/*.pswp__button--fs {
+  display: none; }*/
 
 .pswp--supports-fs .pswp__button--fs {
   display: block; }
@@ -83,7 +83,7 @@
   background-position: -44px 0; }
 
 .pswp__button--zoom {
-  display: none;
+  /*display: none;*/
   background-position: -88px 0; }
 
 .pswp--zoom-allowed .pswp__button--zoom {
