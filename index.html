@@ -30,6 +30,7 @@
 
     <!-- UI JS file -->
     <script src="js/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <style>
         .my-gallery {
   width: 100%;
@@ -77,9 +78,6 @@
             <li class="sidebar-brand">
                 <a href="#top" onclick=$("#menu-close").click();>종욱 ♥ 수미</a>
             </li>
-            <!--<li>
-                <a href="#top" onclick=$("#menu-close").click();>웃어요~</a>
-            </li>-->
             <li>
                 <a href="#about" onclick=$("#menu-close").click();>초대합니다</a>
             </li>
@@ -109,19 +107,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-			<!--<h2>Stylish Portfolio is the perfect theme for your next project!</h2>-->
 			<h3>초대합니다!</h3>
-			<a href="javascript:void(0)" style="font-size:12px" id="kakaotalk_share"><img src="img/kakaolink_btn_medium.png" width="15"> 카카오톡 공유</a>
-			<span style="padding-left:5px"></span>
-			<a href="javascript:void(0)" style="font-size:12px" id="kakaostory-share-button" data-url="https://jonguk-sumi.github.io">
-				<img src="img/kakaostory_icon_small.png" width="15"> 카카오스토리 공유
+			<a href="javascript:void(0)">
+				<img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="15">
+			</a> 	
+			<a href="javascript:void(0)" style="font-size:12px">
+				카카오톡 공유
 			</a>
-		    <!--<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>-->
-                    <p style="color:gray;margin:25px auto 25px;font-size:17px;">
+			<span style="padding-left:5px"></span>
+			<a href="javascript:shareStory()">
+				<img src="//dev.kakao.com/sdk/js/resources/story/icon_small.png" width="15">
+			</a> 
+			<a href="javascript:shareStory()" style="font-size:12px">
+				카카오스토리 공유
+			</a>
+		    <p style="color:gray;margin:25px auto 25px;font-size:17px;">
 		    	2016년 11월 26일 토요일<br>
 		    	오후 1시 30분<br>
-			<span style="color:black; font-weight:bold;">노량진 CTS기독교TV빌딩<br>더리치 채플 / 2층 채플홀</span>
-		    <p>
+			<span style="color:black; font-weight:bold;">노량진 CTS기독교TV빌딩<br>더리치 채플 / 2층 채플홀</span><br>
+			<a href="#location" style="font-size:11pt">오시는길</a>
+		    </p>
 		    <p class="lead">
 		    	가을 끝자락에 저희 두 사람이<br>
 			이제 하나님의 사랑으로<br>
@@ -152,64 +157,64 @@
                 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
         	    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/p01_o.jpg" itemprop="contentUrl" data-size="1050x750">
-                          <img src="img/p01_m.jpg" itemprop="thumbnail" alt="Image description"  width="350" height="250"/>
+                          <img src="img/p01_m.jpg" itemprop="thumbnail" width="350" height="250"/>
                       </a>
                     </figure>
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/02_o.jpg" itemprop="contentUrl" data-size="750x1050">
-                          <img src="img/02_m.jpg" itemprop="thumbnail" alt="Image description" width="250" height="350"/>
+                          <img src="img/02_m.jpg" itemprop="thumbnail" width="250" height="350"/>
                       </a>
                     </figure>
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/08_o.jpg" itemprop="contentUrl" data-size="1050x750">
-                          <img src="img/08_m.jpg" itemprop="thumbnail" alt="Image description"  width="350" height="250"/>
+                          <img src="img/08_m.jpg" itemprop="thumbnail" width="350" height="250"/>
                       </a>
                     </figure>
 
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/p02_o.jpg" itemprop="contentUrl" data-size="1050x750">
-                          <img src="img/p02_m.jpg" itemprop="thumbnail" alt="Image description"  width="350" height="250"/>
+                          <img src="img/p02_m.jpg" itemprop="thumbnail" width="350" height="250"/>
                       </a>
                     </figure>
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/04_o.jpg" itemprop="contentUrl" data-size="1050x750">
-                          <img src="img/04_m.jpg" itemprop="thumbnail" alt="Image description"  width="350" height="250"/>
+                          <img src="img/04_m.jpg" itemprop="thumbnail" width="350" height="250"/>
                       </a>
                     </figure>
 
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/p03_o.jpg" itemprop="contentUrl" data-size="750x1050">
-                          <img src="img/p03_m.jpg" itemprop="thumbnail" alt="Image description" width="250" height="350"/>
+                          <img src="img/p03_m.jpg" itemprop="thumbnail" width="250" height="350"/>
                       </a>
                     </figure>
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/05_o.jpg" itemprop="contentUrl" data-size="750x1050">
-                          <img src="img/05_m.jpg" itemprop="thumbnail" alt="Image description"  width="250" height="350"/>
+                          <img src="img/05_m.jpg" itemprop="thumbnail" width="250" height="350"/>
                       </a>
                     </figure>
 		    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/07_o.jpg" itemprop="contentUrl" data-size="750x1050">
-                          <img src="img/07_m.jpg" itemprop="thumbnail" alt="Image description"  width="250" height="350"/>
+                          <img src="img/07_m.jpg" itemprop="thumbnail" width="250" height="350"/>
                       </a>
                     </figure>
 		    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/p04_o.jpg" itemprop="contentUrl" data-size="750x1050">
-                          <img src="img/p04_m.jpg" itemprop="thumbnail" alt="Image description" width="250" height="350"/>
+                          <img src="img/p04_m.jpg" itemprop="thumbnail" width="250" height="350"/>
                       </a>
                     </figure>
  	   	    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/p05_o.jpg" itemprop="contentUrl" data-size="1050x750">
-                          <img src="img/p05_m.jpg" itemprop="thumbnail" alt="Image description"  width="350" height="250"/>
+                          <img src="img/p05_m.jpg" itemprop="thumbnail" width="350" height="250"/>
                       </a>
                     </figure>
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/03_o.jpg" itemprop="contentUrl" data-size="1050x750">
-                          <img src="img/03_m.jpg" itemprop="thumbnail" alt="Image description"  width="350" height="250"/>
+                          <img src="img/03_m.jpg" itemprop="thumbnail" width="350" height="250"/>
                       </a>
                     </figure>
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                       <a href="img/09_o.jpg" itemprop="contentUrl" data-size="1050x750">
-                          <img src="img/09_m.jpg" itemprop="thumbnail" alt="Image description"  width="350" height="250"/>
+                          <img src="img/09_m.jpg" itemprop="thumbnail" width="350" height="250"/>
                       </a>
                     </figure>
                 </div>
@@ -297,7 +302,7 @@
             </div>
         </div>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>-->
+	</footer>-->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -584,21 +589,21 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
 </script>
-<script>
-  window.kakaoAsyncInit = function () {
+<script src="js/web2app/web2app-standalone-1.0.9.min.js"></script>
+<script type='text/javascript'>
     Kakao.init('4258bd99c8f8afb0219ac6f17f0ff583');
-    Kakao.Story.createShareButton({
-      container: '#kakaostory-share-button'
-    });
-  };
-
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//developers.kakao.com/sdk/js/kakao.story.min.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'kakao-js-sdk'));
+    var ua = util.userAgent();
+    function shareStory() {
+	var shareObj =  {
+        	url: location.href,
+        	text: '종욱♥수미 결혼해요~'
+      	};
+	if (ua.platform === 'pc') {
+      	    Kakao.Story.share(shareObj);
+	} else {
+      	    Kakao.Story.open(shareObj);
+	}
+    }
 </script>
 </body>
 
