@@ -108,10 +108,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
 			<h3>초대합니다!</h3>
-			<a href="javascript:void(0)">
+			<a href="javascript:;" id="kakaotalkLinkImgBtn" onclick="return shareTalk()">
 				<img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="15">
 			</a> 	
-			<a href="javascript:void(0)" style="font-size:12px">
+			<a href="javascript:;" id="kakaotalkLinkTextBtn" style="font-size:12px" onclick="return shareTalk()">
 				카카오톡 공유
 			</a>
 			<span style="padding-left:5px"></span>
@@ -596,7 +596,7 @@ initPhotoSwipeFromDOM('.my-gallery');
     function shareStory() {
 	var shareObj =  {
         	url: location.href,
-        	text: '종욱♥수미 결혼해요~'
+        	text: '종욱♥수미 결혼해요'
       	};
 	if (ua.platform === 'pc') {
       	    Kakao.Story.share(shareObj);
@@ -604,7 +604,30 @@ initPhotoSwipeFromDOM('.my-gallery');
       	    Kakao.Story.open(shareObj);
 	}
     }
-</script>
+    function shareTalk() {
+	if (ua.platform === 'pc') {
+		alert("PC에서는 공유가 안됩니다.");
+		return false;
+	}
+	return true;
+    }
+    var talkLinkElements = ["kakaotalkLinkImgBtn", "kakaotalkLinkTextBtn"];
+    for (var i = 0; i < talkLinkElements.length; i++) {
+	Kakao.Link.createTalkLinkButton({
+      		container: talkLinkElements[i],
+      		label: '종욱♥수미 결혼해요',
+      		image: {
+        		src: 'https://jonguk-sumi.github.io/img/thumbnail.jpg',
+        		width: '300',
+        		height: '200'
+      		},
+      		webButton: {
+        		text: '청첩장 보기',
+        		url: 'https://jonguk-sumi.github.io' 
+      		}
+    	});
+    }
+    </script>
 </body>
 
 </html>
