@@ -14,6 +14,8 @@
     <meta property="og:image:secure_url" content="https://jonguk-sumi.github.io/img/thumbnail.jpg">
     <meta property="og:image:width" content="405" />
     <meta property="og:image:height" content="282" />
+    <link href="/img/ju-sm_m.jpeg" rel="shortcut icon">
+    <link href="/img/ju-sm_m.jpeg" rel="apple-touch-icon-precomposed"> 
     <title>종욱 ♥ 수미 결혼해요 - 11/26 1:30 더리치(CTS기독교TV 빌딩 2층, 베라카) 채플 웨딩홀</title>
 
     <!-- Core CSS file -->
@@ -130,8 +132,10 @@
 			함께해주셔서 축복해주시길 소망합니다.
 		    </p>
                     <p class="lead" style="line-height: 2.2">
-		    이현재∙김용옥 <span style="font-size:12px">의 장남</span> 종욱 <a href="tel:010-4947-6449">☎</a> <br>
-		    우기호∙임상순 <span style="font-size:12px">의 장녀</span> 수미 <a href="tel:010-9490-2202">☎</a> <br>
+		    이현재∙김용옥 <span style="font-size:12px">의 장남</span> 종욱 <a href="tel:010-4947-6449">☎</a> 
+		    <a href="sms:010-4947-6449">✉</a><br>
+		    우기호∙임상순 <span style="font-size:12px">의 장녀</span> 수미 <a href="tel:010-9490-2202">☎</a>
+		    <a href="sms:010-9490-2202">✉</a><br>    
 		    </p>
 		    
                 </div>
@@ -588,7 +592,7 @@ initPhotoSwipeFromDOM('.my-gallery');
     function shareStory() {
 	var shareObj =  {
         	url: location.href,
-        	text: '종욱♥수미 결혼해요'
+        	text: '종욱♥수미 결혼해요 :: 2016.11.26(토) 1:30 :: 노량진 CTS기독교TV빌딩 2층 더리치 채플웨딩홀'
       	};
 	if (ua.platform === 'pc') {
       	    Kakao.Story.share(shareObj);
@@ -607,7 +611,7 @@ initPhotoSwipeFromDOM('.my-gallery');
     for (var i = 0; i < talkLinkElements.length; i++) {
 	Kakao.Link.createTalkLinkButton({
       		container: talkLinkElements[i],
-      		label: '종욱♥수미 결혼해요 :: 2016.11.26(토) 노량진 CTS기독교TV빌딩 2층 더리치 채플웨딩홀',
+      		label: '종욱♥수미 결혼해요 :: 2016.11.26(토) 1:30 :: 노량진 CTS기독교TV빌딩 2층 더리치 채플웨딩홀',
       		image: {
         		src: 'https://jonguk-sumi.github.io/img/thumbnail.jpg',
         		width: '300',
