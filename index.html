@@ -50,6 +50,17 @@
 .my-gallery figcaption {
   display: none;
 }
+.dim {
+    display:none;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color:black;
+    opacity:0.75;
+    z-index:100;
+}	    
     </style>
 
     <!-- Bootstrap Core CSS -->
@@ -299,6 +310,7 @@
         </div>-->
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
+    <div class="dim"></div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -312,12 +324,20 @@
     $("#menu-close").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
+	$(".dim").hide();    
     });
     // Opens the sidebar menu
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
+        $(".dim").show();
     });
+    $(".dim").click(function(e) {
+        e.preventDefault();
+	$("#sidebar-wrapper").toggleClass("active");
+	$(".dim").hide();
+    });
+   
     // Scrolls to the selected menu item on the page
     $(function() {
         $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
