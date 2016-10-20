@@ -168,7 +168,6 @@ hr.small {
 .top_title {
     font-size: 4em; 
     /*color: gainsboro; */
-    color: black; 
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
